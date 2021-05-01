@@ -31,7 +31,7 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-@media only screen and (max-width: 565px) {
+@media only screen and (max-width: 630px) {
 	.col-4 {width: 100%;}
 	.col-8 {width: 100%;}
 	.col-6 {width: 100%;}
@@ -39,10 +39,15 @@ body {
 	.col-7 {width: 100%;}
 }
 
+img {
+	width: 30%;
+}
+
 
 .sticker-panel {
 	background-color: green;
 	height: 200px;
+	overflow-y: scroll;
 }
 
 .text-panel {
