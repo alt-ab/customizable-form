@@ -1,6 +1,3 @@
-function f(){
-}
-
 window.onload = function () {
 
   // Definitions
