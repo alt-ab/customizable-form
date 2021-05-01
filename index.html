@@ -5,9 +5,10 @@
 	<link rel="stylesheet" href="styles.css">
 	<script src="script.js"></script>
 </head>
-<body>
-	<h1>Sample Survey</h1>
-	<div class="col-5">
+<body >
+<h1>Sample Survey</h1>
+<div class='flex-container' style='display: flex;'>
+	<div style='flex-basis: 100%; flex-grow: 1;'>
 		<div class='sticker-panel'>
 			<img title='blue flower' alt='blue flower' src='imgs/flower-blue.png'>
 			<img title='pink flower' alt='pink flower' src='imgs/flower-pink.png'>
@@ -32,7 +33,7 @@
 		<div class='drawing-panel'></div>
 		<div class='import-panel'></div>
 	</div>
-	<div class="col-7">
+	<div style='flex-basis: 100%; flex-grow: 1;'>
 		<form action='/survey/checkout' method='post' enctype="multipart/form-data">
 			<div>
 			<input type='submit'>
@@ -41,5 +42,6 @@
 			</div>
 		</form>
 	</div>
+</div>
 </body>
 </html>
