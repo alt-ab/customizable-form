@@ -22,7 +22,7 @@ To build a better Google Forms.
 
 - Drag and Drop
 - User controlled size, text creation, color theme
-- Free Hand Drawing
+- Free hand drawing save and uploads
 
 ## 5. User Flow
 
