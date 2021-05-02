@@ -1,5 +1,6 @@
-Enter Project Name
+Customizable Form
 ==================
+This is a project for the Qoom Spring 2021 Creator Group.
 ## What this project does
 
 ## Why this project is useful
