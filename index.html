@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta content="width=device-width, initial-scale=1" name="viewport"/>
 	<link rel="stylesheet" href="styles.css">
 	<script src="script.js"></script>
 </head>
-<body >
+
+<body>
+
 <h1>Sample Survey</h1>
   <div class="main-container">
       
-        <div class="colors">
-          <button value="#FBFF00"></button>
-          <button value="#009fff"></button>
-          <button value="#000000"></button>
-          <button value="#FF0000"></button>
-          <button value="#3EFF00"></button>
-          <button value="#FFF"></button>
-        </div>
+    <div class="colors">
+      <button value="#FBFF00"></button>
+      <button value="#009fff"></button>
+      <button value="#000000"></button>
+      <button value="#FF0000"></button>
+      <button value="#3EFF00"></button>
+      <button value="#FFF"></button>
+    </div>
 
-        <input id="brush" type="range" value="1" min="1" max="5" step="1"></input>
-        <button id="clear" type="button">Clear</button>
-        <button id="save" type="button">Save</button>
-        <br>
-        <canvas id="paint-canvas" width="640" height="400"></canvas>
-
+    <input id="brush" type="range" value="1" min="1" max="5" step="1"></input>
+    <button id="clear" type="button">Clear</button>
+    <button id="save" type="button">Save</button>
+    <br>
+    <canvas id="paint-canvas" width="640" height="400"></canvas>
   </div>
-<div class='flex-container' style='display: flex;'>
-	<div style='flex-basis: 100%; flex-grow: 1;'>
-		<div class='sticker-panel'>
-			<img title='blue flower' alt='blue flower' src='imgs/flower-blue.png'>
-			<img title='pink flower' alt='pink flower' src='imgs/flower-pink.png'>
-			<img title='yellow flower' alt='yellow flower' src='imgs/flower-yellow.png'>
-			<img title='blue heart' alt='blue heart' src='imgs/heart-blue.png'>
-			<img title='pink heart' alt='pink heart' src='imgs/heart-pink.png'>
-			<img title='yellow heart' alt='yellow heart' src='imgs/heart-yellow.png'>
-			<img title='blue colored hello' alt='blue colored hello' src='imgs/hello-blue.png'>
-			<img title='pink colored hello' alt='pink colored hello' src='imgs/hello-pink.png'>
-			<img title='yellow colored hello' alt='yellow colored hello' src='imgs/hello-yellow.png'>
-			<img title='blue colored hi' alt='blue colored hi' src='imgs/hi-blue.png'>
-			<img title='pink colored hi' alt='pink colored hi' src='imgs/hi-pink.png'>
-			<img title='yellow colored hi' alt='yellow colored hi' src='imgs/hi-yellow.png'>
-			<img title='blue smileyface' alt='blue smileyface' src='imgs/smileyface-blue.png'>
-			<img title='pink smileyface' alt='pink smileyface' src='imgs/smileyface-pink.png'>
-			<img title='yellow smileyface' alt='yellow smileyface' src='imgs/smileyface-yellow.png'>
-			<img title='blue thank you' alt='blue thank you' src='imgs/thankyou-blue.png'>
-			<img title='pink thank you' alt='pink thank you' src='imgs/thankyou-pink.png'>
-			<img title='yellow thank you' alt='yellow thank you' src='imgs/thankyou-yellow.png'>
-		</div>
-		<div class='text-panel'></div>
-		<div class='import-panel'></div>
-	</div>
-	<div style='flex-basis: 100%; flex-grow: 1;'>
+
+  <div class='flex-container' style='display: flex;'>
+	  <div style='flex-basis: 100%; flex-grow: 1;'>
+		  <div class='sticker-panel'>
+			  <img title='blue flower' alt='blue flower' src='imgs/flower-blue.png'>
+			  <img title='pink flower' alt='pink flower' src='imgs/flower-pink.png'>
+			  <img title='yellow flower' alt='yellow flower' src='imgs/flower-yellow.png'>
+			  <img title='blue heart' alt='blue heart' src='imgs/heart-blue.png'>
+			  <img title='pink heart' alt='pink heart' src='imgs/heart-pink.png'>
+			  <img title='yellow heart' alt='yellow heart' src='imgs/heart-yellow.png'>
+			  <img title='blue colored hello' alt='blue colored hello' src='imgs/hello-blue.png'>
+			  <img title='pink colored hello' alt='pink colored hello' src='imgs/hello-pink.png'>
+			  <img title='yellow colored hello' alt='yellow colored hello' src='imgs/hello-yellow.png'>
+			  <img title='blue colored hi' alt='blue colored hi' src='imgs/hi-blue.png'>
+			  <img title='pink colored hi' alt='pink colored hi' src='imgs/hi-pink.png'>
+			  <img title='yellow colored hi' alt='yellow colored hi' src='imgs/hi-yellow.png'>
+			  <img title='blue smileyface' alt='blue smileyface' src='imgs/smileyface-blue.png'>
+			  <img title='pink smileyface' alt='pink smileyface' src='imgs/smileyface-pink.png'>
+			  <img title='yellow smileyface' alt='yellow smileyface' src='imgs/smileyface-yellow.png'>
+			  <img title='blue thank you' alt='blue thank you' src='imgs/thankyou-blue.png'>
+			  <img title='pink thank you' alt='pink thank you' src='imgs/thankyou-pink.png'>
+			  <img title='yellow thank you' alt='yellow thank you' src='imgs/thankyou-yellow.png'>
+		  </div>
+
+		  <div class='text-panel'></div>
+
+		  <div class='import-panel'>
+        <p>Use the "Choose File" button to upload a file</p>
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+      </div>
+	  </div>
+	
+  <div style='flex-basis: 100%; flex-grow: 1;'>
 		<form action='/survey/checkout' method='post' enctype="multipart/form-data">
 			<div>
 			<input type='submit'>
@@ -59,6 +71,7 @@
 			</div>
 		</form>
 	</div>
-</div>
+
+  </div>
 </body>
 </html>
