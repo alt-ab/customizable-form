@@ -57,6 +57,7 @@ input, select {
 	box-sizing:border-box;
 }
 
+/*styling for drawing panel*/
 .main-container {
 	display: flex;
 	flex-direction: column;
