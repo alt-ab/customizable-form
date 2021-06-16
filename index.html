@@ -13,6 +13,7 @@
 	<div class='flex-container' style='display: flex;'>
 		<div style='flex-basis: 100%; flex-grow: 1;'>
 			<div class='sticker-panel'>
+        <h2>Sticker Area</h2>
 				<img title='blue flower' alt='blue flower' src='imgs/flower-blue.png'>
 				<!-- <img title='pink flower' alt='pink flower' src='imgs/flower-pink.png'>
 				<img title='yellow flower' alt='yellow flower' src='imgs/flower-yellow.png'>
@@ -33,36 +34,59 @@
 				<img title='yellow thank you' alt='yellow thank you' src='imgs/thankyou-yellow.png'> -->
 			</div>
 
-			<div class='text-panel'></div>
+			<div class='text-panel'>
+        <h2>Text Input Area</h2>
+        <form action='/action_page.php'>
+          <p>Type Here:</p>
+          <input type="text" id="inputlabel" name="inputlabel" maxlength="20">
+          <br><br>
+          <input type="submit" value="Submit">
+          <br><br>
+        </form>
+      </div>
 
-      <div class='drawing-panel'></div>
+      <div class='drawing-panel'>
+        <h2>Drawing Area</h2>
+        <p>Choose a color and use the slider to change size:</p>
 	      <div class="main-container">
 		      <div class="colors">
-			      <button value="#FBFF00"></button>
-			      <button value="#009fff"></button>
-			      <button value="#000000"></button>
-			      <button value="#FF0000"></button>
-			      <button value="#3EFF00"></button>
-			      <button value="#FFF"></button>
+			      <button value="rgb(255, 0, 0)"></button>
+			      <button value="#ffa600"></button>
+			      <button value="#fbff00"></button>
+			      <button value="rgb(81, 255, 0)"></button>
+			      <button value="rgb(0, 255, 255)"></button>
+			      <button value="rgb(0, 38, 255)"></button>
+            <button value="rgb(153, 0, 255)"></button>
+            <button value="rgb(255, 0, 242)"></button>
 		      </div>
 
-		      <input id="brush" type="range" value="1" min="1" max="10" step="0.5"></input>
-		      <button id="clear" type="button">Clear</button>
-		      <button id="save" type="button">Save</button>
+		      <input id="brush" type="range" value="1" min="1" max="10" step="0.2"></input>
+
+          <div class="buttonwrapper">
+            <button class="drawingbutton">Clear</button>
+		        <button class="drawingbutton">Save</button>
+          </div>
+
 		      <br>
 		      <canvas id="paint-canvas" width="640" height="400"></canvas>
 	      </div>
+        <br><br>
+      </div>
 
 			<div class='import-panel'>
-				<p>Use the "Choose File" button to upload a file</p>
+        <h2>Import File Area</h2>
+				<p>Use the "Choose File" button to upload a file: </p>
 				<form action="/action_page.php">
 					<input type="file" id="myFile" name="filename">
-					<input type="submit">
+					<br><br>
+          <input type="submit">
 				</form>
+        <br>
 			</div>
 		</div>
 
 		<div style='flex-basis: 100%; flex-grow: 1;'>
+      <h2>Form Area</h2>
 			<form class='submit-form' action='/survey/checkout' method='post' enctype="multipart/form-data">
 				<div>
 				<input type='submit'>
