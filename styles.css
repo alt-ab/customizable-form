@@ -30,23 +30,37 @@ p {
 	  }
 }
 
+#upload-img {
+	width: 150px;
+}
+
+
 img {
-	width: 30%;
+	width: 80px;
 }
 
 
 .sticker-panel {
-	background-color: rgba(158, 218, 181, 0.411);
+	background-color: rgba(101, 150, 90, 0.288);
 	height: 200px;
 	overflow-y: scroll;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
-.drawing-panel {
-  background-color: rgba(221, 160, 221, 0.349);
+.sticker-panel > div {
+	width: 33.33%;
 }
 
 .text-panel {
 	background-color: rgba(0, 183, 255, 0.288);
+}
+
+.drawing-panel {
+	background-color: rgba(221, 160, 221, 0.349);
+	overflow-y: scroll;
+	height: 200px;
 }
 
 .import-panel {
@@ -82,7 +96,6 @@ input, select {
 	box-sizing:border-box;
 }
 
-/*styling for drawing panel*/
 .main-container {
 	display: flex;
 	flex-direction: column;
@@ -92,10 +105,8 @@ input, select {
 
 canvas {
   border: 1px black solid;
-  border-radius: 15px; 
-  cursor:pointer;
-  width: 100%;
-  height: auto;
+  cursor:crosshair;
+  background-color: white;
 }
 
 .colors button {
@@ -141,19 +152,10 @@ canvas {
   background-color: rgb(255, 0, 242);
 }
 
-.wrapperbutton {
-  text-align: center;
-  display: inline-block;
+.colors button:nth-of-type(9) {
+  background-color: rgb(165, 42, 42);
 }
 
-.drawingbutton {
-  padding:5px 10px; 
-  background:rgba(204, 204, 204, 0.5); 
-  border:none;
-  cursor:pointer;
-  border-radius: 15px; 
-  text-align: center;
-  display: inline-block;
-  font-size: 14px;
-  font-family: times;
+.colors button:nth-of-type(10) {
+  background-color: #000000;
 }
