@@ -1,8 +1,9 @@
+// Utilized Hack Club's Painting App Workshop (https://workshops.hackclub.com/painting_app/)
 // Definitions
-var canvas = document.getElementById("paint-canvas");
-var context = canvas.getContext("2d");
+var canvas = document.getElementById('paint-canvas');
+var context = canvas.getContext('2d');
 var boundings = canvas.getBoundingClientRect();
-var range = document.getElementById("brush")
+var range = document.getElementById('brush')
 	.value;
 
 // Specifications
@@ -76,21 +77,75 @@ saveButton.addEventListener('click', function () {
 	a.click();
 });
 
-function read(input) {
-	let img = document.getElementById("upload-img");
+
+function img(input) {
+	let img = document.getElementsByClassName('import-img')[1];
 	let reader = new FileReader();
 
 	reader.onload = function (e) {
 		img.setAttribute('src', e.target.result);
+		const prefix = 'upload-img';
+		img.zIndex = toString(img.id.slice(prefix.length));
 	}
 
 	reader.readAsDataURL(input.files[0]);
 
 }
 
-//draggable
-/* draggable element */
+// duplication
+function textDup() {
+	var elem = document.getElementsByClassName('writing-txt')[0];
+	var clone = elem.cloneNode(true);
+	const prefix = 'upload-txt';
+	const q = clone.id.slice(prefix.length);
+	const i = parseInt(q) + 1;
+	elem.id = prefix + i;
+	clone.style.display = 'inherit';
+	elem.after(clone);
+}
 
+function textDupH() {
+	var elem = document.getElementsByClassName('writing-txt')[0];
+	var clone = elem.cloneNode(true);
+	const prefix = 'upload-txt';
+	const q = clone.id.slice(prefix.length);
+	const i = parseInt(q) + 1;
+	elem.id = prefix + i;
+	clone.classList.add('header-txt');
+
+	clone.style.display = 'inherit';
+	elem.after(clone);
+}
+
+function textDupT() {
+	var elem = document.getElementsByClassName('writing-txt')[0];
+	var clone = elem.cloneNode(true);
+	const prefix = 'upload-txt';
+	const q = clone.id.slice(prefix.length);
+	const i = parseInt(q) + 1;
+	elem.id = prefix + i;
+	clone.classList.add('title-txt');
+
+	clone.style.display = 'inherit';
+	elem.after(clone);
+}
+
+function imgDup() {
+	var elem = document.getElementsByClassName('import-div')[0];
+	var clone = elem.cloneNode(true);
+
+	var image = document.getElementsByClassName('import-img')[0];
+	const prefix = 'upload-img';
+	const q = image.id.slice(prefix.length);
+	const i = parseInt(q) + 1;
+	image.id = prefix + i;
+
+	clone.style.display = 'inherit';
+
+	elem.after(clone);
+}
+
+// draggable
 function allowDrop(ev) {
 	ev.preventDefault();
 }
@@ -104,15 +159,15 @@ function drag(ev) {
 
 	var style = window.getComputedStyle(ev.target, null);
 
-	ev.dataTransfer.setData("text/plain",
-		(parseInt(style.getPropertyValue("left"), 10) - ev.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - ev.clientY) + ',' + ev.target.id);
+	ev.dataTransfer.setData('text/plain',
+		(parseInt(style.getPropertyValue('left'), 10) - ev.clientX) + ',' + (parseInt(style.getPropertyValue('top'), 10) - ev.clientY) + ',' + ev.target.id);
 
 }
 
 function drop(ev) {
 	ev.preventDefault();
 
-	var offset = ev.dataTransfer.getData("text/plain")
+	var offset = ev.dataTransfer.getData('text/plain')
 		.split(',');
 
 	var x = (ev.clientX + parseInt(offset[0], 10));
@@ -132,4 +187,47 @@ function drop(ev) {
 	} else {
 		image.style.position = 'static';
 	}
+	
+	var boxElement = document.querySelector('.box');
+	
+	boxElement.appendChild(image);
+}
+
+// accordian
+var acc = document.getElementsByClassName('accordion');
+var i;
+
+for (i = 0; i < acc.length; i++) {
+	acc[i].addEventListener('click', function () {
+		this.classList.toggle('active');
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + 'px';
+		}
+	});
+}
+
+function screenshot(){
+   var button = document.getElementById('but_screenshot');
+   button.style.display = 'none';
+   
+   html2canvas(document.getElementById('box')).then(function(canvas) {
+    button.style.display = 'block';
+    
+    var imageName = prompt('Please enter image name');
+	var canvasDataURL = canvas.toDataURL();
+	var a = document.createElement('a');
+	a.href = canvasDataURL;
+	a.download = imageName || 'drawing';
+	a.click();
+    
+   });
+   
+}
+
+function changeColor() {
+    document.getElementById("box").style.backgroundColor =
+	document.getElementById("MyColorPicker").value;
 }

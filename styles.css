@@ -1,37 +1,85 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background:  #ecf0f3;
+	overflow-y: hidden;
+}
+
+.head-div {
+	box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+	text-align: center;
+	background: #ecf0f3;
+	padding-bottom: 3px;
+	border-radius: 20px;
+	margin: 0 15px 10px;
+}
+
 h1 {
-  text-align: center;
-  font-family: georgia;
-  font-size: 36px;
+	text-align: center;
+	font-family: georgia;
+	font-size: 36px;
+	margin-bottom: 0px;
+	margin-top: 7px;
 }
 
 h2 {
-  text-align: center;
-  font-family: garamond;
+	text-align: center;
+	font-family: garamond;
 }
 
 p {
-  font-family: Times New Roman;
-  font-size: 18px;
+	font-family: Times New Roman;
+	font-size: 18px;
 }
 
-* {
-    box-sizing: border-box;
+.info {
+	padding: 20px;
+	margin: 10px;
+	font-family: georgia;
 }
 
-.flex-container {
+.info > p {
+	font-family: georgia;
+}
+
+.container {
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
-	flex-wrap: nowrap;
 }
 
-@media only screen and (max-width: 630px) {
+.bag {
+	width: 50%;
+}
+
+.box-div {
+	width: 50%;
+	height: 33em;
+}
+
+.box {
+	height: 100%;
+	background-color: #faf0d4;
+}
+
+@media only screen and (max-width: 700px) {
 	.flex-container {
 		flex-direction: column;
-	  }
+	}
+
+	.bag {
+		width: 100%;
+	}
+
+	.box-div {
+		width: 100%;
+	}
 }
 
-#upload-img {
-	width: 150px;
+.import-img {
+	width: 250px;
 }
 
 
@@ -39,63 +87,37 @@ img {
 	width: 80px;
 }
 
-
-.sticker-panel {
-	background-color: rgba(101, 150, 90, 0.288);
-	height: 200px;
-	overflow-y: scroll;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.sticker-panel > div {
-	width: 33.33%;
-}
-
-.text-panel {
-	background-color: rgba(0, 183, 255, 0.288);
-}
-
-.drawing-panel {
-	background-color: rgba(221, 160, 221, 0.349);
-	overflow-y: scroll;
-	height: 200px;
-}
-
-.import-panel {
-	background-color: #fff23d46;
-}
-
 .submit-form {
 	background-color: darkgrey;
-	height: 43.7em;
+	height: 30em;
+	width: 100%;
 }
 
 input[type=submit] {
-  padding:5px 10px; 
-  background:rgba(204, 204, 204, 0.5); 
-  border:none;
-  cursor:pointer;
-  border-radius: 15px; 
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  font-family: times;
+	padding: 5px 10px;
+	background: rgba(204, 204, 204, 0.5);
+	border: none;
+	cursor: pointer;
+	border-radius: 15px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	font-family: times;
 }
 
-form > div {
-}
+form>div {}
 
 label {
 	width: 100%;
 }
 
-input, select {
+input,
+select {
 	width: 100%;
-	box-sizing:border-box;
+	box-sizing: border-box;
 }
 
+/* Utilized Hack Club's Painting App Workshop (https://workshops.hackclub.com/painting_app/) */
 .main-container {
 	display: flex;
 	flex-direction: column;
@@ -104,58 +126,189 @@ input, select {
 }
 
 canvas {
-  border: 1px black solid;
-  cursor:crosshair;
-  background-color: white;
+	border: 1px black solid;
+	cursor: crosshair;
+	background-color: white;
 }
 
 .colors button {
-  display: inline-block;
-  border: 1px solid #00000026;
-  border-radius: 70px;
-  outline: none;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  margin-bottom: 5px;
+	display: inline-block;
+	border: 1px solid #00000026;
+	border-radius: 70px;
+	outline: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 5px;
+	transition: 0.4s;
+}
+
+.colors button:hover {
+	border: 1.5px solid white;
 }
 
 .colors button:nth-of-type(1) {
-  background-color: rgb(255, 0, 0);
+	background-color: rgb(255, 0, 0);
 }
 
 .colors button:nth-of-type(2) {
-  background-color: #ffa600;
+	background-color: #ffa600;
 }
 
 .colors button:nth-of-type(3) {
-  background-color: #fbff00;
+	background-color: #fbff00;
 }
 
 .colors button:nth-of-type(4) {
-  background-color: rgb(81, 255, 0);
+	background-color: rgb(81, 255, 0);
 }
 
 .colors button:nth-of-type(5) {
-  background-color: rgb(0, 255, 255);
+	background-color: rgb(0, 255, 255);
 }
 
 .colors button:nth-of-type(6) {
-  background-color: rgb(0, 38, 255);
+	background-color: rgb(0, 38, 255);
 }
 
 .colors button:nth-of-type(7) {
-  background-color: rgb(153, 0, 255);
+	background-color: rgb(153, 0, 255);
 }
 
 .colors button:nth-of-type(8) {
-  background-color: rgb(255, 0, 242);
+	background-color: rgb(255, 0, 242);
 }
 
 .colors button:nth-of-type(9) {
-  background-color: rgb(165, 42, 42);
+	background-color: rgb(165, 42, 42);
 }
 
 .colors button:nth-of-type(10) {
-  background-color: #000000;
+	background-color: #000000;
+}
+
+.button {
+  color: #FFFFFF;
+  padding: 0.3em 0.4em 0.1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 0.1em 0.1em 0;
+  cursor: pointer;
+  opacity: 0.7;
+  border: 0.16em solid rgba(255,255,255,0);
+  border-radius: 2em;
+  text-shadow: 0 0.04em 0.04em rdga(0,0,0,0.35);
+  transition: 0.4s;
+}
+
+.button:hover {
+	border-color: rgba(255,255,255,1);
+}
+
+/*accordian*/
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+	border: 0.16em solid white;
+    border-radius: 1em;
+}
+
+.active,
+.accordion:hover {
+	background-color: #ccc;
+}
+
+.accordion:after {
+	content: '\002B';
+	color: #777;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	content: "\2212";
+}
+
+.sticker-panel {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: rgba(101, 150, 90, 0.288);
+	height: 700px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.sticker-panel>div {
+	width: 25%;
+}
+
+.text-panel {
+	padding: 0 18px;
+	background-color: rgba(0, 183, 255, 0.288);
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.writing-txt {
+	display: none;
+	padding: 15px;
+	font-size: 20px;
+}
+
+.writing-txt:hover {
+	cursor: pointer;
+	border: 1px solid black;
+}
+
+.header-txt {
+	font-size: 30px;
+}
+
+.title-txt {
+	font-size: 70px;
+}
+
+.drawing-panel {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: rgba(221, 160, 221, 0.349);
+	/*overflow-y: scroll;*/
+	height: 1000px;
+}
+
+.import-panel {
+	padding: 0 18px;
+	background-color: #fff23d46;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.import-div {
+	display: none;
+}
+
+.color-panel {
+	padding: 0 18px;
+	background-color: #ffccf1;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }

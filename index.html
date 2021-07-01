@@ -1,141 +1,169 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta content="width=device-width, initial-scale=1" name="viewport"/>
-	<link rel="stylesheet" href="styles.css">
-</head>
+	<head>
+		<meta content='width=device-width, initial-scale=1' name='viewport' />
+		<link rel='stylesheet' href='styles.css'>
+		<script type="text/javascript" src="html2canvas.js"></script>
+	</head>
 
-<body>
+	<body>
 
-<h1>Sample Survey</h1>
+		<div class='container'>
+			<div class='bag'>
+				<div class='head-div'>
+					<h1>Tools</h1>
+				</div>
+				<button class='accordion'>Drawing</button>
+				<!-- Utilized Hack Club's Painting App Workshop (https://workshops.hackclub.com/painting_app/) -->
+				<div class='drawing-panel'>
+					<h2 style='margin-bottom: 0;'>Draw your own images</h2>
+					<p style='margin: 4px 18px 10px;'>Choose a color and use the slider to change size:</p>
+					<div class='main-container'>
+						<div class='colors'>
+							<button value='rgb(255, 0, 0)'></button>
+							<button value='#ffa600'></button>
+							<button value='#fbff00'></button>
+							<button value='rgb(81, 255, 0)'></button>
+							<button value='rgb(0, 255, 255)'></button>
+							<button value='rgb(0, 38, 255)'></button>
+							<button value='rgb(153, 0, 255)'></button>
+							<button value='rgb(255, 0, 242)'></button>
+							<button value='rgb(165, 42, 42)'></button>
+							<button value='#000000'></button>
+						</div>
 
-	<div class='flex-container' style='display: flex;'>
-		<div style='flex-basis: 100%; flex-grow: 1;'>
-			<div class='sticker-panel'>
-				<div style='padding-bottom: 15px; width: 100%;'>
-					<h2>Sticker Area</h2>
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='blue flower' alt='blue flower' src='imgs/flower-blue.png' draggable="true" ondragstart="drag(event)" id="drag1">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='pink flower' alt='pink flower' src='imgs/flower-pink.png' draggable="true" ondragstart="drag(event)" id="drag2">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='yellow flower' alt='yellow flower' src='imgs/flower-yellow.png' draggable="true" ondragstart="drag(event)" id="drag3">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='blue heart' alt='blue heart' src='imgs/heart-blue.png' draggable="true" ondragstart="drag(event)" id="drag4">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='pink heart' alt='pink heart' src='imgs/heart-pink.png' draggable="true" ondragstart="drag(event)" id="drag5">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='yellow heart' alt='yellow heart' src='imgs/heart-yellow.png' draggable="true" ondragstart="drag(event)" id="drag6">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='blue colored hello' alt='blue colored hello' src='imgs/hello-blue.png' draggable="true" ondragstart="drag(event)" id="drag7">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='pink colored hello' alt='pink colored hello' src='imgs/hello-pink.png' draggable="true" ondragstart="drag(event)" id="drag8">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='yellow colored hello' alt='yellow colored hello' src='imgs/hello-yellow.png' draggable="true" ondragstart="drag(event)" id="drag9">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='blue colored hi' alt='blue colored hi' src='imgs/hi-blue.png' draggable="true" ondragstart="drag(event)" id="drag10">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='pink colored hi' alt='pink colored hi' src='imgs/hi-pink.png' draggable="true" ondragstart="drag(event)" id="drag11">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='yellow colored hi' alt='yellow colored hi' src='imgs/hi-yellow.png' draggable="true" ondragstart="drag(event)" id="drag12">
-				</div>
-
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='blue smileyface' alt='blue smileyface' src='imgs/smileyface-blue.png' draggable="true" ondragstart="drag(event)" id="drag13">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='pink smileyface' alt='pink smileyface' src='imgs/smileyface-pink.png' draggable="true" ondragstart="drag(event)" id="drag14">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='yellow smileyface' alt='yellow smileyface' src='imgs/smileyface-yellow.png' draggable="true" ondragstart="drag(event)" id="drag15">
-				</div>
-
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='blue thank you' alt='blue thank you' src='imgs/thankyou-blue.png' draggable="true" ondragstart="drag(event)" id="drag16">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='pink thank you' alt='pink thank you' src='imgs/thankyou-pink.png' draggable="true" ondragstart="drag(event)" id="drag17">
-				</div>
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img title='yellow thank you' alt='yellow thank you' src='imgs/thankyou-yellow.png' draggable="true" ondragstart="drag(event)" id="drag18">
-				</div>
-
-			</div>
-
-			<div class='drawing-panel'>
-				<h2>Drawing Area</h2>
-        		<p>Choose a color and use the slider to change size:</p>
-				<div class="main-container">
-					<div class="colors">
-						<button value="rgb(255, 0, 0)"></button>
-			    		<button value="#ffa600"></button>
-			    		<button value="#fbff00"></button>
-			    		<button value="rgb(81, 255, 0)"></button>
-			    		<button value="rgb(0, 255, 255)"></button>
-			    		<button value="rgb(0, 38, 255)"></button>
-            			<button value="rgb(153, 0, 255)"></button>
-            			<button value="rgb(255, 0, 242)"></button>
-            			<button value="rgb(165, 42, 42)"></button>
-            			<button value="#000000"></button>
+						<input id='brush' type='range' value='1' min='1' max='10' step='0.2'/>
+						<button class='button' id='clear' style="background-color:#9a4ef1" type='button'>Clear</button>
+						<button class='button' id='save' style="background-color:#ad74ed" type='button'>Save</button>
+						
+						<canvas id='paint-canvas' width='640' height='270'></canvas>
 					</div>
+				</div>
+				
+				<button class='accordion'>Stickers</button>
+				<div class='sticker-panel'>
+					<div style='padding-bottom: 15px; width: 100%;'>
+						<h2>Choose your stickers</h2>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='blue flower' alt='blue flower' src='imgs/flower-blue.png' draggable='true' ondragstart='drag(event)' id='drag1'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='pink flower' alt='pink flower' src='imgs/flower-pink.png' draggable='true' ondragstart='drag(event)' id='drag2'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='yellow flower' alt='yellow flower' src='imgs/flower-yellow.png' draggable='true' ondragstart='drag(event)' id='drag3'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='blue heart' alt='blue heart' src='imgs/heart-blue.png' draggable='true' ondragstart='drag(event)' id='drag4'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='pink heart' alt='pink heart' src='imgs/heart-pink.png' draggable='true' ondragstart='drag(event)' id='drag5'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='yellow heart' alt='yellow heart' src='imgs/heart-yellow.png' draggable='true' ondragstart='drag(event)' id='drag6'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='blue colored hello' alt='blue colored hello' src='imgs/hello-blue.png' draggable='true' ondragstart='drag(event)' id='drag7'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='pink colored hello' alt='pink colored hello' src='imgs/hello-pink.png' draggable='true' ondragstart='drag(event)' id='drag8'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='yellow colored hello' alt='yellow colored hello' src='imgs/hello-yellow.png' draggable='true' ondragstart='drag(event)' id='drag9'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='blue colored hi' alt='blue colored hi' src='imgs/hi-blue.png' draggable='true' ondragstart='drag(event)' id='drag10'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='pink colored hi' alt='pink colored hi' src='imgs/hi-pink.png' draggable='true' ondragstart='drag(event)' id='drag11'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='yellow colored hi' alt='yellow colored hi' src='imgs/hi-yellow.png' draggable='true' ondragstart='drag(event)' id='drag12'>
+					</div>
+
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='blue smileyface' alt='blue smileyface' src='imgs/smileyface-blue.png' draggable='true' ondragstart='drag(event)' id='drag13'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='pink smileyface' alt='pink smileyface' src='imgs/smileyface-pink.png' draggable='true' ondragstart='drag(event)' id='drag14'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+						<img title='yellow smileyface' alt='yellow smileyface' src='imgs/smileyface-yellow.png' draggable='true' ondragstart='drag(event)' id='drag15'>
+					</div>
+					<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+					<img title='blue thank you' alt='blue thank you' src='imgs/thankyou-blue.png' draggable='true' ondragstart='drag(event)' id='drag16'>
+					</div>
+				</div>
+
+				<button class='accordion'>Text</button>
+				<div class='text-panel'>
+					<h2>Write your text</h2>
+					<p>Choose what type of text to add, drag the text box to the form area, and edit the text:</p>
+					<div class='text-div'>
+						<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+							<div class='writing-txt' id='upload-txt0' draggable='true' ondragstart='drag(event)' contenteditable='true'>Enter your text here</div>
+						</div>
+						<br>
+					</div>
+
+					<button class='button' onclick='textDup()' style="background-color:#71aef5">Add A Paragraph</button>
+					<button class='button' onclick='textDupH()' style="background-color:#4e9af1">Add A Header</button>
+					<button class='button' onclick='textDupT()' style="background-color:#277ee3">Add A Title</button>
+
+					<br><br>
+					<br><br>
+				</div>
+
+				<button class='accordion'>Files</button>
+				<div class='import-panel'>
+					<h2>Upload a file</h2>
+					<p>Use the 'Choose File' button to upload a file: </p>
+					<div class='import-div'>
+						<input class='button' type='file' accepts='image/*' id='imageInput' onchange='img(this);'>
+						<div ondrop='drop(event)' ondragover='allowDrop(event)'>
+							<img class='import-img' id='upload-img0' draggable='true' ondragstart='drag(event)'>
+						</div>
+						<br>
+					</div>
+
+					<button class='button' onclick='imgDup()' style="background-color:#f1bb4e">Add An Image</button>
+					<br><br>
+					<br><br>
+				</div>
+
+				<button class='accordion'>Card Color</button>
+				<div class='color-panel'>
+					<h2>Choose the color of your card</h2>
+					<input name="MyColorPicker" type="color" id="MyColorPicker"/>
+					<button class='button' style="background-color:#9a4ef1" id='submitColor' onclick="changeColor()">Submit Color</button>
+					
+					<br><br>
+				</div>
+				<div class='head-div'>
+					<div class='info'>
+					<p>Create your own customizable form! Click on the tools you want to use and drag them into the Card Area. Then once your done, save your card!</p>
+					</div>
+				</div>
+			</div>
+
+			<div class='box-div'>
+				<div class='head-div'>
+					<h1>Card</h1>
+				</div>
+				
+				<div class='box' id='box' ondrop='drop(event)' ondragover='allowDrop(event)'>
+				
+				<input class='button' style="background-color:#aba6a6" type='button' id='but_screenshot' value='Save Card' onclick='screenshot();'/>
+				</div>
+			</div>
 			
-					<input id="brush" type="range" value="1" min="1" max="10" step="0.2"></input>
-					<button id="clear" type="button">Clear</button>
-					<button id="save" type="button">Save</button>
-					<br>
-					<canvas id="paint-canvas" width="640" height="400"></canvas>
-				</div>
-        		<br><br>
-			</div>
 
-			<div class='text-panel'>
-        		<h2>Text Input Area</h2>
-        		<form action='/action_page.php'>
-        			<p>Type Here:</p>
-        			<input type="text" id="inputlabel" name="inputlabel" maxlength="20">
-        			<br><br>
-        			<input type="submit" value="Submit">
-        			<br><br>
-        		</form>
-        		
-    		</div>
-
-			<div class='import-panel'>
-        		<h2>Import File Area</h2>
-				<p>Use the "Choose File" button to upload a file: </p>
-				<input type="file" accepts="image/*" id="imageInput" onchange="read(this);">
-				<div ondrop="drop(event)" ondragover="allowDrop(event)">
-					<img id="upload-img" draggable="true" ondragstart="drag(event)">
-				</div>
-			</div>
 		</div>
 
-	<div class='box' style='flex-basis: 100%; flex-grow: 1;' ondrop="drop(event)" ondragover="allowDrop(event)">
-		<h2>Form Area</h2>
-		<form class='submit-form' action='/survey/checkout' method='post' enctype="multipart/form-data">
-			<div>
-			<input type='submit'>
-			<input type='hidden' name='redirecturl' value='/dashboard.html'>
-			<input type='hidden' name='survey' value='sample-survey'>
-			</div>
-		</form>
-	</div>
+		<script type='text/javascript' src='script.js' charset='utf-8'></script>
 
-	</div>
-	
-	<script type="text/javascript" src="script.js" charset="utf-8"></script>
-</body>
+	</body>
+
 </html>
