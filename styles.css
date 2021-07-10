@@ -14,6 +14,13 @@ body {
 	padding-bottom: 3px;
 	border-radius: 20px;
 	margin: 0 15px 10px;
+	transition: 4s;
+}
+
+.head-div:hover {
+	background: linear-gradient(145deg, #d4d8db, #fdffff);
+	box-shadow:  14px 14px 20px #cbced1,
+             -14px -14px 20px #ffffff;
 }
 
 h1 {
@@ -213,14 +220,21 @@ canvas {
 	color: #444;
 	cursor: pointer;
 	padding: 18px;
-	width: 100%;
+	width: 90%;
 	border: none;
 	text-align: left;
 	outline: none;
 	font-size: 15px;
 	transition: 0.4s;
-	border: 0.16em solid white;
-    border-radius: 1em;
+	margin: 2px 0 5px;
+	
+	margin-left: 30px;
+	border-radius: 4px;
+	
+background: #ecf0f3;
+	box-shadow:  4px 4px 8px #c9cccf,
+             -4px -4px 8px #ffffff;
+   
 }
 
 .active,
